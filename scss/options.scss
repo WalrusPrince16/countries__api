@@ -1,0 +1,13 @@
+.options {
+	padding: var(--padding);
+	margin: 4rem 0;
+	margin-top: calc(var(--nav-height) + 4rem);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+
+	@media (max-width: 640px) {
+		flex-wrap: wrap;
+	}
+}

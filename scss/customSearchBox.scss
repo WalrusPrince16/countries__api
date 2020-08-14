@@ -1,0 +1,44 @@
+.countries {
+    &__search {
+        appearance: none;
+        -webkit-appearance: none;
+        width: var(--search-bar-width);
+        background-color: var(--color-search-bg);
+        outline: none;
+        font-size: inherit;
+        font-family: inherit;
+        padding: 1rem 2rem;
+        border: 2px solid var(--color-main-text);
+        @media (max-width: 640px) {
+            min-width: 100%;
+        }
+    }
+
+    &__list {
+        background-color: var(--color-search-bg);
+        border: 1px solid var(--color-main-text);
+        border-top: none;
+        width: var(--search-bar-width);
+        z-index: var(--important);
+        list-style: none;
+        left: -100rem;
+        position: absolute;
+        max-height: 50rem;
+        overflow-y: scroll;
+        transition: all var(--quick-transition);
+
+        & li {
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--color-main-text);
+            &:hover {
+                cursor: pointer;
+                background-color: var(--color-element-text);
+                color: var(--color-element-bg)
+            }
+        }
+    }
+
+    &__search:focus ~ &__list {
+        left: 0;
+    }
+}

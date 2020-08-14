@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+    --color-white: hsl(0, 0%, 100%);
+    --important: 100;
+    --superImportant: 1000;
+    --nav-height: 8rem;
+    --search-bar-width: 100%;
+    --padding: 0 20rem;
+    --quick-transition: 0.3s;
+    --color-nav-bg: #f8f9fa;
+    --color-search-bg: #f8f9fa;
+    --color-select-bg: #f8f9fa;
+    --color-card-bg: #f8f9fa;
+    --color-main-bg: #e9ecef;
+    --color-grid-bg: #e9ecef;
+    --color-main-text: #212529;
+    --color-element-text: #212529;
+    --color-element-bg: #ffffff;
+
+    @media (min-width: 200px) {
+
+        --padding: 0 3rem;
+        --card-gap: 4rem;
+    }
+
+    @media (min-width: 1000px) {
+
+        --padding: 0 10rem;
+        --card-gap: 2rem;
+    }
+
+    @media (min-width: 1300px) {
+        --padding: 0 20rem;
+
+    }
+
+    @media (min-width: 1300px) {
+        --padding: 0 20rem;
+    }
+
+    @media (min-width: 1600px) {
+        font-size: 70%;
+    }
+}
+
+html.dark {
+    --color-nav-bg: #1b263b;
+    --color-search-bg: #1b263b;
+    --color-select-bg: #1b263b;
+    --color-card-bg: #1b263b;
+
+    --color-main-bg: #273043;
+    --color-grid-bg: #273043;
+
+    --color-main-text: #e0e1dd;
+    --color-element-text: #e0e1dd;
+
+    --color-element-bg: #000000;
+}
+
+body {
+    font-size: 1.6rem;
+    color: var(--color-main-text);
+    background-color: var(--color-main-bg);
+}

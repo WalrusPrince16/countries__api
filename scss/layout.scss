@@ -1,0 +1,22 @@
+.results {
+    position: relative;
+}
+
+@media (max-width: 640px) {
+	.options {
+		flex-wrap: wrap;
+	}
+	.results {
+		width: 100%;
+	}
+}
+
+/* MAIN GRID */
+
+.countries__grid {
+	padding: var(--padding);
+	display: grid;
+	background-color: var(--color-grid-bg);
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	grid-gap: var(--card-gap);
+}

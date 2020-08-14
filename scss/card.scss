@@ -1,0 +1,41 @@
+/* CARD */
+
+.country {
+    &__card {
+        position: relative;
+        display: flex;
+        min-width: 20rem;
+        flex-direction: column;
+        background-color: var(--color-card-bg);
+        box-shadow: 5px 10px 7px -4px rgba(0, 0, 0, 0.22);
+        cursor: pointer;
+        font-size: 1rem;
+        transition: transform .3s;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+
+    &__flag {
+        min-height: 15rem;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__text {
+        line-height: 1.5;
+        font-size: 1.4rem;
+        padding: 2rem;
+
+        &-heading {
+            margin-bottom: 1rem;
+        }
+
+        &-bold,
+        &-heading {
+            font-weight: bold;
+        }
+    }
+}

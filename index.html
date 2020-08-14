@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7d32c0b1df.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://unpkg.com/lodash@4.16.6"></script>
+    <script src="src/app.js" defer></script>
+    <title>App</title>
+</head>
+
+<body>
+    <nav class="header">
+        <h1>
+            API Project
+        </h1>
+        <button id="theme" class="btn">
+            <i class="fas fa-sun"></i> Light Mode
+        </button>
+    </nav>
+
+    <div class="options">
+        <div class="results">
+            <input placeholder="Search by Country" type="text" id="countries__search" class="countries__search">
+            <ul id="countries__list" class="countries__list">
+                <!-- COUNTRIES -->
+            </ul>
+        </div>
+        <div id="selectRegion" class="select__box">
+            <span class="select__text">Select </span>
+            <div class="select__graphics">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+            <ul class="select__list">
+                <li data-region="all" class="select__option">
+                    All
+                </li>
+                <li data-region="africa" class="select__option">
+                    Africa
+                </li>
+                <li data-region="americas" class="select__option">
+                    Americas
+                </li>
+                <li data-region="asia" class="select__option">
+                    Asia
+                </li>
+                <li data-region="europe" class="select__option">
+                    Europe
+                </li>
+                <li data-region="oceania" class="select__option">
+                    Oceania
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="countries__grid" class="countries__grid">
+        <!-- CARDS HERE -->
+    </div>
+
+    <div id="country__details" class="country__details">
+        <div id="country__details-grid" class="country__details-grid">
+            <div class="country__details-header">
+                <button id="btn" class="btn">
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+            </div>
+            <div class="country__details-flag-box">
+                <div id="country__details-flag-img" class="country__details-flag-img">
+                    <!-- Flag Img -->
+                </div>
+            </div>
+            <div class="country__details-text-box">
+                <h1 id="heading" class="heading">Country Name</h1>
+                <div id="country__facts" class="country__facts">
+                    <!--  -->
+                </div>
+                <ul id="country__borders" class="country__borders">
+                    <!--  -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

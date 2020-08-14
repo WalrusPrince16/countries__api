@@ -1,0 +1,120 @@
+/* DETAILS SCREEN */
+
+.country {
+    &__details {
+        position: fixed;
+        top: var(--nav-height);
+        bottom: 0;
+        right: 0;
+        left: 100%;
+        min-height: 100vh;
+        overflow-y: scroll;
+        width: 100%;
+        padding: var(--padding);
+        background-color: var(--color-main-bg);
+        z-index: var(--important);
+        transition: left var(--quick-transition);
+
+        &--toggle {
+            left: 0%;
+        }
+
+        &-grid {
+            display: grid;
+            grid-template-rows: 1fr 4fr 3fr;
+            grid-template-columns: 1fr 1fr;
+            height: 100%;
+            align-items: center;
+            grid-template-areas:
+                'head head'
+                'img content'
+                '. .';
+            @media (max-width: 640px) {
+                align-items: center;
+                grid-template-rows: 10vh 50vh auto;
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    'head'
+                    'img'
+                    'content';
+            }
+        }
+        &-flag-box {
+            display: flex;
+            overflow-x: hidden;
+            flex-direction: column;
+            align-self: start;
+            width: 100%;
+            height: 100%;
+            grid-area: img;
+            @media (max-width: 640px) {
+                min-height: 25rem;
+                width: 100%;
+            }
+        }
+        &-flag-img {
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-image: url("https://restcountries.eu/data/alb.svg");
+        }
+
+        &-header {
+            grid-area: head;
+        }
+
+        &-text-box {
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding: 0 2rem;
+
+            p {
+                width: 50%;
+                @media (max-width: 640px) {
+                    width: 100%;
+                }
+            }
+
+            @media (max-width: 640px) {
+                margin: 2rem 0;
+                align-self: stretch;
+                padding: 0;
+            }
+        }
+    }
+
+    &__facts {
+        display: flex;
+        line-height: 1.5;
+        flex-wrap: wrap;
+        @media (max-width: 640px) {
+            margin: 2rem 0;
+        }
+    }
+
+    &__borders {
+        @media (max-width: 640px) {
+            height: 100vh;
+            width: 100%;
+        }
+        &-li {
+            display: inline-block;
+            border: 1px solid var(--color-element-text);
+            border-radius: 1rem;
+            color: var(--color-element-text);
+            background-color: var(--color-element-bg);
+            cursor: pointer;
+            padding: .5rem 1rem;
+            margin-right: 1rem;
+            @media (max-width: 640px) {
+                display: block;
+                margin-right: 0;
+                text-align: center;
+                margin: 1rem auto;
+            }
+        }
+    }
+}
